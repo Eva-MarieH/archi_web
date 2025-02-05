@@ -24,9 +24,14 @@ app.get('/produit/:nom/:stock', (req, res) => {
     console.log('Nom : ' + nom);
     console.log('Stock : ' + stock);
     res.json({ 'nom': nom, 'stock': stock });
-    //res.send('{"nom":"' + nom + '","stock":"' + stock + '"}'); // termine le cycle
+    res.send('Méthode GET'); // termine le cycle
 });
 
+app.get('/redirect', (req, res) => {
+    console.log('Appel sur requête entrante /redirect');
+    res.redirect('/produit/ordinateur/10');
+    res.send('Méthode GET'); // termine le cycle
+});
 
 
 
