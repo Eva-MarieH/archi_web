@@ -24,7 +24,7 @@ app.use('/produit/:nom/:stock', (req, res, next) => { // 1e fonction middleware 
 });
 app.use('/produit/:nom/:stock', (req, res, next) => {// 2e fonction middleware dans la pile
     console.log('Appelé à chaque requête entrante : deuxieme fois');
-    req.stock = req.params.stock - 1;
+    req.stock = req.stock - 1;
     next(); // Appelle la fonction middleware suivante
 });
 
