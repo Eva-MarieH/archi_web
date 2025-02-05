@@ -21,13 +21,13 @@ app.use('/produit/:nom/:stock',(req, res, next) => { // 1e fonction middleware d
     console.log('Appelé à chaque requête entrante : première fois');
     var nom = req.params.nom;
     var stock = req.params.stock - 1;
-    next(); // Appelle la fonction middleware suivante
+    next(nom,stock); // Appelle la fonction middleware suivante
 });
 app.use('/produit/:nom/:stock',(req, res, next) => {// 2e fonction middleware dans la pile
     console.log('Appelé à chaque requête entrante : deuxieme fois');
     var nom = req.params.nom;
     var stock = req.params.stock - 1;
-    next(); // Appelle la fonction middleware suivante
+    next(nom,stock); // Appelle la fonction middleware suivante
 });
 
 app.get('/produit/:nom/:stock', (req, res) => {
