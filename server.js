@@ -17,7 +17,14 @@ const server = https.createServer(options, app).listen(3212, () => {
     console.log('HTTPS => listening on 3212');
 });
 
-
+app.get('/produit/:nom/:stock', (req, res) => {
+    console.log('Appel sur requête entrante /produit');
+    var nom = req.params.nom;
+    var stock = req.params.stock;
+    console.log('Nom : ' + nom);
+    console.log('Stock : ' + stock);
+    res.send('Méthode GET'); // termine le cycle
+});
 
 
 
