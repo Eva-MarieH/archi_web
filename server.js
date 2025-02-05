@@ -23,7 +23,8 @@ app.get('/produit/:nom/:stock', (req, res) => {
     var stock = req.params.stock;
     console.log('Nom : ' + nom);
     console.log('Stock : ' + stock);
-    res.send('{"nom":"' + nom + '","stock":"' + stock + '"}'); // termine le cycle
+    res.json({ 'nom': nom, 'stock': stock });
+    //res.send('{"nom":"' + nom + '","stock":"' + stock + '"}'); // termine le cycle
 });
 
 
