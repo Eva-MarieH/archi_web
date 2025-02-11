@@ -38,8 +38,8 @@ app.get('/produit/:nom/:stock', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    console.log('Appel sur requête entrante /redirect');
-    res.redirect('/appTest/dist/app-test/browser/index.html');
+    console.log('Appel sur requête entrante /');
+    res.sendFile('/appTest/dist/app-test/browser/index.html');
     //res.send('Méthode GET'); // termine le cycle
 });
 
