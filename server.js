@@ -37,9 +37,9 @@ app.get('/produit/:nom/:stock', (req, res) => {
     res.json({ 'nom': nom, 'stock': stock });
 });
 
-app.get('/redirect', (req, res) => {
+app.get('/', (req, res) => {
     console.log('Appel sur requête entrante /redirect');
-    res.redirect('/produit/ordinateur/10');
+    res.sendFile('/appTest/dist/app-test/browser/index.html');
     res.send('Méthode GET'); // termine le cycle
 });
 
