@@ -39,7 +39,7 @@ app.get('/produit/:nom/:stock', (req, res) => {
 
 app.get('/', (req, res) => {
     console.log('Appel sur requête entrante /');
-    res.sendFile('/nfs/data01/data/uapv25/uapv2502990/public_html/archi_web/appTest/dist/app-test/browser/index.html');
+    res.sendFile('/nfs/data01/data/uapv25/uapv2502990/public_html/archi_web/appTest/dist/app-test/browser/indexm.html');
     //res.send('Méthode GET'); // termine le cycle
 });
 
