@@ -17,9 +17,13 @@ const server = https.createServer(options, app).listen(3212, () => {
     console.log('HTTPS => listening on 3212');
 });
 
+var __dirname = '/nfs/data01/data/uapv25/uapv2502990/public_html/archi_web/appTest/';
+
+app.use(express.static(__dirname + 'dist/app-test/browser/'));
+
 app.get('/', (req, res) => {
     console.log('Appel sur requête entrante /');
-    res.sendFile('/home/nas-wks01/users/uapv2502990/Donnees_itinerantes_depuis_serveur_pedagogique/public_html/archi_web/appTest/dist/app-test/browser');
+    res.sendFile('index.html');
     //res.send('Méthode GET'); // termine le cycle
 });
 
