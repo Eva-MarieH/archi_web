@@ -40,7 +40,7 @@ app.get('/produit/:nom/:stock', (req, res) => {
 app.get('/', (req, res) => {
     console.log('Appel sur requête entrante /redirect');
     res.sendFile('/appTest/dist/app-test/browser/index.html');
-    res.send('Méthode GET'); // termine le cycle
+    //res.send('Méthode GET'); // termine le cycle
 });
 
 
